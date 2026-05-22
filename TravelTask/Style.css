@@ -1,0 +1,1056 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Poppins', sans-serif;
+}
+
+body {
+    overflow-x: hidden;
+}
+
+.hero {
+    width: 100%;
+    min-height: 100vh;
+    background:
+        linear-gradient(rgba(0, 0, 0, 0.35), rgba(0, 0, 0, 0.35)),
+        url("https://themewagon.github.io/pacific/images/destination-5.jpg");
+    background-size: cover;
+    background-position: center;
+    position: relative;
+    color: white;
+}
+
+/* ================= NAVBAR ================= */
+
+nav {
+    width: 100%;
+    padding: 25px 90px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.logo h1 {
+    font-size: 42px;
+    font-weight: 800;
+    line-height: 40px;
+}
+
+.logo span {
+    color: #ff6b2c;
+    font-size: 14px;
+    letter-spacing: 2px;
+    font-weight: 600;
+}
+
+.nav-links {
+    display: flex;
+    gap: 40px;
+}
+
+.nav-links a {
+    color: white;
+    text-decoration: none;
+    font-size: 18px;
+    font-weight: 500;
+    transition: 0.3s;
+}
+
+.nav-links a:hover {
+    color: #ff6b2c;
+}
+
+/* ================= HERO CONTENT ================= */
+
+.hero-content {
+    position: absolute;
+    top: 50%;
+    left: 90px;
+    margin-top: 100px;
+    transform: translateY(-50%);
+    width: 700px;
+}
+
+.hero-content h3 {
+    font-family: 'Great Vibes', cursive;
+    color: #ff6b2c;
+    font-size: 75px;
+    font-weight: 400;
+    margin-bottom: 30px;
+    animation: Fadeinup 3s;
+}
+
+.hero-content h1 {
+    font-size: 50px;
+    line-height: 50px;
+    font-weight: 800;
+    margin-bottom: 30px;
+    animation: Fadeinup 3s;
+}
+
+.hero-content p {
+    font-size: 24px;
+    padding-bottom: 50px;
+    font-weight: 400;
+    color: #f1f1f1;
+    animation: Fadeinup 3s;
+}
+
+.fixed-buttons {
+    position: fixed;
+    right: 0;
+    top: 60%;
+    width: 180px;
+    z-index: 1000;
+}
+
+.scrollup {
+    border: 2px solid white;
+    border-radius: 50%;
+    width: 50px;
+    height: 50px;
+    padding: 15px;
+    margin-left: 100px;
+}
+
+.scrollup:hover {
+    background-color:#c74a16;
+    color: #fff;
+}
+
+@keyframes Fadeinup {
+    0% {
+        opacity: 0;
+        visibility: hidden;
+        transform: translate3d(0, 80px, 0);
+    }
+
+    100% {
+        visibility: visible;
+        opacity: 2;
+        transform: none;
+    }
+}
+
+
+
+/* ================= RESPONSIVE HERO ================= */
+
+@media(max-width:1200px) {
+
+    .hero-content h1 {
+        font-size: 60px;
+        line-height: 70px;
+    }
+}
+
+@media(max-width:768px) {
+
+    nav {
+        padding: 20px;
+        flex-direction: column;
+        gap: 20px;
+    }
+
+    .nav-links {
+        gap: 18px;
+        flex-wrap: wrap;
+        justify-content: center;
+    }
+
+    .hero-content {
+        left: 20px;
+        width: 90%;
+    }
+
+    .hero-content h1 {
+        font-size: 45px;
+        line-height: 55px;
+    }
+
+    .hero-content h3 {
+        font-size: 40px;
+    }
+
+    .hero-content p {
+        font-size: 18px;
+    }
+}
+
+/* =============== ADVENTURE SECTION =============== */
+
+.adventure-section {
+    width: 100%;
+    min-height: 100vh;
+    background: #f5f5f5;
+    padding: 100px 90px;
+    display: flex;
+    gap: 60px;
+    align-items: center;
+}
+
+/* ================= LEFT SIDE ================= */
+
+.cards-container {
+    width: 50%;
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 22px;
+}
+
+.card {
+    height: 340px;
+    position: relative;
+    overflow: hidden;
+    cursor: pointer;
+}
+
+.card::before {
+    content: "";
+    position: absolute;
+    inset: 0;
+    background-size: cover;
+    background-position: center;
+    transition: 0.5s;
+}
+
+.card:hover::before {
+    transform: scale(1.1);
+}
+
+.card1::before {
+    background-image: url("https://images.unsplash.com/photo-1507525428034-b723cf961d3e?q=80&w=1200&auto=format&fit=crop");
+}
+
+.card2::before {
+    background-image: url("https://images.unsplash.com/photo-1464822759023-fed622ff2c3b?q=80&w=1200&auto=format&fit=crop");
+}
+
+.card3::before {
+    background-image: url("https://images.unsplash.com/photo-1517841905240-472988babdf9?q=80&w=1200&auto=format&fit=crop");
+}
+
+.card4::before {
+    background-image: url("https://images.unsplash.com/photo-1500530855697-b586d89ba3ee?q=80&w=1200&auto=format&fit=crop");
+}
+
+.overlay {
+    position: absolute;
+    inset: 0;
+    background: rgba(0, 150, 255, 0.45);
+}
+
+.card2 .overlay {
+    background: rgba(0, 120, 120, 0.45);
+}
+
+.card3 .overlay {
+    background: rgba(0, 180, 180, 0.45);
+}
+
+.card4 .overlay {
+    background: rgba(255, 90, 60, 0.45);
+}
+
+/* ================= ICON ================= */
+
+.icon-box {
+    width: 86px;
+    height: 62px;
+    background: #ff6b2c;
+    position: absolute;
+    top: 20px;
+    left: -5px;
+    z-index: 2;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.icon-box i {
+    color: white;
+    font-size: 30px;
+}
+
+.icon-box::after {
+    content: "";
+    position: absolute;
+    bottom: -10px;
+    left: 0;
+    border-top: 10px solid #c74a16;
+    border-left: 10px solid transparent;
+}
+
+/* ================= CONTENT ================= */
+
+.card-content {
+    position: absolute;
+    bottom: 35px;
+    left: 25px;
+    right: 20px;
+    color: white;
+    z-index: 2;
+}
+
+.card-content h3 {
+    font-size: 30px;
+    margin-bottom: 15px;
+    font-weight: 700;
+}
+
+.card-content p {
+    font-size: 20px;
+    line-height: 38px;
+}
+
+/* ================= RIGHT SIDE ================= */
+
+.adventure-content {
+    width: 50%;
+}
+
+.adventure-content h4 {
+    color: #ff6b2c;
+    font-size: 48px;
+    font-family: 'Great Vibes', cursive;
+    font-weight: 400;
+    margin-bottom: 10px;
+}
+
+.adventure-content h1 {
+    font-size: 70px;
+    line-height: 90px;
+    color: #333;
+    margin-bottom: 30px;
+    font-weight: 800;
+}
+
+.adventure-content p {
+    font-size: 15px;
+    line-height: 25px;
+    color: #8b8b8b;
+    margin-bottom: 20px;
+}
+
+.adventure-content button {
+    margin-top: 20px;
+    padding: 20px 40px;
+    border: none;
+    background: #ff6b2c;
+    color: white;
+    font-size: 20px;
+    font-weight: 600;
+    border-radius: 4px;
+    cursor: pointer;
+    transition: 0.3s;
+}
+
+.adventure-content button:hover {
+    background: #e3571c;
+}
+
+/* ================= RESPONSIVE ================= */
+
+@media(max-width:1200px) {
+
+    .adventure-section {
+        flex-direction: column;
+    }
+
+    .cards-container,
+    .adventure-content {
+        width: 100%;
+    }
+
+    .adventure-content h1 {
+        font-size: 50px;
+        line-height: 65px;
+    }
+}
+
+@media(max-width:768px) {
+
+    .adventure-section {
+        padding: 70px 20px;
+    }
+
+    .cards-container {
+        grid-template-columns: 1fr;
+    }
+
+    .adventure-content h1 {
+        font-size: 40px;
+        line-height: 55px;
+    }
+
+    .adventure-content p {
+        font-size: 18px;
+        line-height: 34px;
+    }
+
+}
+
+/* =============== DESTINATION SECTION =============== */
+
+.destination-section {
+    width: 100%;
+    min-height: 100vh;
+    background: #f5f5f5;
+    padding: 90px 70px;
+}
+
+/* ================= TITLE ================= */
+
+.section-title {
+    text-align: center;
+    margin-bottom: 70px;
+}
+
+.section-title h4 {
+    color: #ff6b2c;
+    font-size: 50px;
+    font-family: 'Great Vibes', cursive;
+    font-weight: 400;
+    margin-bottom: 10px;
+}
+
+.section-title h1 {
+    font-size: 70px;
+    color: #333;
+    font-weight: 800;
+}
+
+/* ================= CARDS ================= */
+
+.destination-container {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 30px;
+}
+
+.destination-card {
+    height: 400px;
+    position: relative;
+    overflow: hidden;
+    border-radius: 6px;
+    cursor: pointer;
+}
+
+.destination-card img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    transition: 0.5s;
+}
+
+.destination-card:hover img {
+    transform: scale(1.1);
+}
+
+/* ================= OVERLAY ================= */
+
+.card-overlay {
+    position: absolute;
+    inset: 0;
+    background: linear-gradient(to top,
+            rgba(0, 0, 0, 0.45),
+            rgba(0, 0, 0, 0.05));
+}
+
+/* ================= RIBBON ================= */
+
+.ribbon {
+    position: absolute;
+    top: 0;
+    left: 20px;
+    background: #ff6b2c;
+    color: white;
+    padding: 12px 22px;
+    font-size: 20px;
+    font-weight: 600;
+    z-index: 2;
+}
+
+.ribbon::after {
+    content: "";
+    position: absolute;
+    top: 0;
+    right: -14px;
+    border-left: 14px solid #c84b17;
+    border-top: 14px solid transparent;
+}
+
+/* ================= TOUR COUNT ================= */
+
+.tour-count {
+    position: absolute;
+    right: 20px;
+    bottom: 20px;
+    background: #ff6b2c;
+    color: white;
+    padding: 12px 20px;
+    border-radius: 30px;
+    font-size: 20px;
+    font-weight: 600;
+    z-index: 2;
+}
+
+/* ================= RESPONSIVE ================= */
+
+@media(max-width:1200px) {
+
+    .destination-container {
+        grid-template-columns: repeat(2, 1fr);
+    }
+
+    .section-title h1 {
+        font-size: 55px;
+    }
+}
+
+@media(max-width:768px) {
+
+    .destination-section {
+        padding: 70px 20px;
+    }
+
+    .destination-container {
+        grid-template-columns: 1fr;
+    }
+
+    .section-title h4 {
+        font-size: 38px;
+    }
+
+    .section-title h1 {
+        font-size: 40px;
+    }
+
+    .destination-card {
+        height: 420px;
+    }
+}
+
+/* =============== TOUR SECTION =============== */
+
+.tour-section {
+    width: 100%;
+    min-height: 100vh;
+    background: #f5f5f5;
+    padding: 90px 70px;
+}
+
+/* ================= TITLE ================= */
+
+.tour-title {
+    text-align: center;
+    margin-bottom: 60px;
+}
+
+.tour-title h4 {
+    color: #ff6b2c;
+    font-size: 38px;
+    font-family: 'Great Vibes', cursive;
+    font-weight: 400;
+    margin-bottom: 8px;
+}
+
+.tour-title h1 {
+    font-size: 50px;
+    color: #333;
+    font-weight: 700;
+}
+
+/* ================= GRID ================= */
+
+.tour-container {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 35px;
+}
+
+/* ================= CARD ================= */
+
+.tour-card {
+    background: white;
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.08);
+    overflow: hidden;
+    position: relative;
+    transition: 0.4s;
+}
+
+.tour-card:hover {
+    transform: translateY(-10px);
+}
+
+.tour-image {
+    height: 250px;
+    overflow: hidden;
+}
+
+.tour-image img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    transition: 0.5s;
+}
+
+.tour-card:hover img {
+    transform: scale(1.1);
+}
+
+/* ================= PRICE TAG ================= */
+
+.price-tag {
+    position: absolute;
+    top: 15px;
+    left: 15px;
+    background: #ff6b2c;
+    color: white;
+    padding: 8px 15px;
+    font-size: 14px;
+    font-weight: 600;
+    z-index: 2;
+}
+
+/* ================= CONTENT ================= */
+
+.tour-content {
+    padding: 25px;
+}
+
+.tour-days {
+    color: #ff6b2c;
+    text-transform: uppercase;
+    font-size: 13px;
+    font-weight: 600;
+    letter-spacing: 1px;
+}
+
+.tour-content h2 {
+    font-size: 28px;
+    color: #333;
+    margin: 15px 0;
+}
+
+.tour-content p {
+    color: #999;
+    font-size: 18px;
+    margin-bottom: 20px;
+}
+
+.tour-content p i {
+    color: #ff6b2c;
+    margin-right: 8px;
+}
+
+/* ================= INFO ================= */
+
+.tour-info {
+    display: flex;
+    gap: 20px;
+    flex-wrap: wrap;
+    border-top: 1px solid #eee;
+    padding-top: 20px;
+}
+
+.tour-info span {
+    color: #999;
+    font-size: 16px;
+}
+
+.tour-info i {
+    color: #ff6b2c;
+    margin-right: 5px;
+}
+
+/* ================= RESPONSIVE ================= */
+
+@media(max-width:1200px) {
+
+    .tour-container {
+        grid-template-columns: repeat(2, 1fr);
+    }
+}
+
+@media(max-width:768px) {
+
+    .tour-section {
+        padding: 70px 20px;
+    }
+
+    .tour-container {
+        grid-template-columns: 1fr;
+    }
+
+    .tour-title h1 {
+        font-size: 38px;
+    }
+
+    .tour-content h2 {
+        font-size: 24px;
+    }
+}
+
+.blog-title {
+    text-align: center;
+    margin-bottom: 60px;
+}
+
+.blog-title h4 {
+    color: #ff6b2c;
+    font-size: 38px;
+    font-family: 'Great Vibes', cursive;
+    font-weight: 400;
+    margin-bottom: 8px;
+}
+
+.blog-title h1 {
+    font-size: 50px;
+    color: #333;
+    font-weight: 700;
+}
+
+.blog-section {
+    width: 100%;
+    padding: 60px 8%;
+    text-align: center;
+}
+
+
+.blog-container {
+    display: flex;
+    justify-content: center;
+    gap: 40px;
+    flex-wrap: wrap;
+}
+
+.blog-card {
+    width: 300px;
+    position: relative;
+}
+
+.blog-image {
+    position: relative;
+    overflow: hidden;
+}
+
+.blog-card:hover {
+    transform: translateY(-20px);
+    transition: 0.5s ease-in-out;
+}
+
+
+.blog-image img {
+    width: 100%;
+    height: 280px;
+    object-fit: cover;
+    display: block;
+}
+
+.blog-image img:hover {
+    transform: scale(1.5);
+    transition: 0.5s ease;
+}
+
+/* Date Box */
+.date-box {
+    position: absolute;
+    top: 0;
+    left: 20px;
+    background: #ff6b35;
+    color: #fff;
+    width: 140px;
+    height: 85px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 15px;
+    box-shadow: 0 5px 10px rgba(0, 0, 0, 0.1);
+}
+
+.date-box h2 {
+    font-size: 40px;
+    line-height: 1;
+}
+
+.date-box .date-text {
+    text-align: left;
+    font-size: 14px;
+    line-height: 1.4;
+    font-weight: 500;
+}
+
+/* Content Box */
+.blog-content {
+    background: #fff;
+    width: 90%;
+    margin: -35px auto 0;
+    position: relative;
+    padding: 20px;
+    text-align: left;
+    box-shadow: 0 5px 20px rgba(0, 0, 0, 0.08);
+}
+
+.blog-content h3 {
+    font-size: 20px;
+    color: #222;
+    margin-bottom: 20px;
+    line-height: 1.5;
+}
+
+.read-btn {
+    display: inline-block;
+    padding: 10px 20px;
+    background: #ff6b35;
+    color: #fff;
+    text-decoration: none;
+    border-radius: 4px;
+    transition: 0.3s;
+    font-weight: 500;
+}
+
+.read-btn:hover {
+    background: #e85b2c;
+}
+
+@media(max-width:768px) {
+    .title {
+        font-size: 36px;
+    }
+}
+
+/* =============== AGENCY BANNER SECTION =============== */
+
+.agency-banner {
+    width: 100%;
+    height: 420px;
+    position: relative;
+    background-image: url("https://images.unsplash.com/photo-1507525428034-b723cf961d3e?q=80&w=1600&auto=format&fit=crop");
+    background-size: cover;
+    background-position: center;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    overflow: hidden;
+}
+
+/* ================= OVERLAY ================= */
+
+.banner-overlay {
+    position: absolute;
+    inset: 0;
+    background: rgba(0, 0, 0, 0.45);
+}
+
+/* ================= CONTENT ================= */
+
+.banner-content {
+    position: relative;
+    z-index: 2;
+    text-align: center;
+    color: white;
+    width: 90%;
+    max-width: 900px;
+}
+
+.banner-content h1 {
+    font-size: 56px;
+    font-weight: 800;
+    margin-bottom: 20px;
+    text-transform: uppercase;
+}
+
+.banner-content p {
+    font-size: 28px;
+    line-height: 45px;
+    margin-bottom: 35px;
+    color: #f1f1f1;
+}
+
+/* ================= BUTTON ================= */
+
+.banner-content button {
+    padding: 20px 45px;
+    border: none;
+    background: #ff6b2c;
+    color: white;
+    font-size: 22px;
+    font-weight: 600;
+    border-radius: 4px;
+    cursor: pointer;
+    transition: 0.3s;
+}
+
+.banner-content button:hover {
+    background: #e6581d;
+    transform: translateY(-3px);
+}
+
+/* ================= RESPONSIVE ================= */
+
+@media(max-width:992px) {
+
+    .banner-content h1 {
+        font-size: 40px;
+    }
+
+    .banner-content p {
+        font-size: 22px;
+        line-height: 36px;
+    }
+}
+
+@media(max-width:768px) {
+
+    .agency-banner {
+        height: 360px;
+        padding: 20px;
+    }
+
+    .banner-content h1 {
+        font-size: 28px;
+        line-height: 40px;
+    }
+
+    .banner-content p {
+        font-size: 18px;
+        line-height: 30px;
+    }
+
+    .banner-content button {
+        padding: 16px 30px;
+        font-size: 18px;
+    }
+}
+
+.footer {
+    position: relative;
+    background-image: url("Travel_images/footer\ bg");
+    margin-top: 50px;
+    padding: 70px 80px;
+    overflow: hidden;
+}
+
+.footer-container {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 50px;
+    position: relative;
+    z-index: 2;
+}
+
+.footer-column {
+    padding-right: 20px;
+    border-right: 1px solid #d8d8d8;
+}
+
+.footer-column:last-child {
+    border-right: none;
+}
+
+.footer h3 {
+    font-size: 30px;
+    font-weight: 700;
+    color: #111;
+    margin-bottom: 35px;
+}
+
+.footer p,
+.footer a,
+.contact-item span {
+    color: #777;
+    font-size: 18px;
+    line-height: 1.9;
+    text-decoration: none;
+}
+
+.footer-links {
+    list-style: none;
+}
+
+.footer-links li {
+    margin-bottom: 16px;
+}
+
+.footer-links a:hover {
+    color: #ff6b2d;
+    transition: 0.8s;
+    padding-left: 20px;
+}
+
+/* Social Icons */
+.social-icons {
+    margin-top: 30px;
+    display: flex;
+    gap: 15px;
+}
+
+.social-icons a {
+    width: 48px;
+    height: 48px;
+    background: #ff6b2d;
+    color: white;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 18px;
+    transition: 0.3s;
+}
+
+.social-icons a:hover {
+    background: #111;
+}
+
+/* Contact */
+.contact-item {
+    display: flex;
+    align-items: flex-start;
+    gap: 15px;
+    margin-bottom: 28px;
+}
+
+.contact-item i {
+    color: #ff6b2d;
+    font-size: 20px;
+    margin-top: 7px;
+}
+
+
+
+/* Responsive */
+@media (max-width: 992px) {
+    .footer-container {
+        grid-template-columns: repeat(2, 1fr);
+    }
+
+    .footer-column:nth-child(2) {
+        border-right: none;
+    }
+}
+
+@media (max-width: 600px) {
+    .footer {
+        padding: 50px 25px;
+    }
+
+    .footer-container {
+        grid-template-columns: 1fr;
+    }
+
+    .footer-column {
+        border-right: none;
+        border-bottom: 1px solid #d8d8d8;
+        padding-bottom: 30px;
+    }
+
+    .footer-column:last-child {
+        border-bottom: none;
+    }
+
+    .footer h3 {
+        font-size: 24px;
+    }
+}
